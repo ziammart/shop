@@ -9,63 +9,63 @@
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
-:root{--black:#080808;--gold:#f5c400;--gold2:#d99b00;--cream:#fffdf4;--green:#159447;--line:#e5dfce}
+:root{--black:#080808;--gold:#f5c400;--gold2:#d99b00;--cream:#fffdf4;--green:#159447;--line:#51451f}
 *{box-sizing:border-box}
-body{margin:0;background:#fffdf5;color:#171717;font-family:'Hind Siliguri',sans-serif}
+body{margin:0;background:#080808;color:#fff;font-family:'Hind Siliguri',sans-serif}
 button,input,select,textarea{font:inherit}button{cursor:pointer}a{text-decoration:none;color:inherit}
 .hidden{display:none!important}.container{width:min(1200px,96%);margin:auto}
 header{background:#050505;color:white;border-bottom:3px solid var(--gold);padding:10px 0}
 .header{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:10px}.logo{width:49px;height:49px;border:2px solid var(--gold);border-radius:12px;display:grid;place-items:center;color:var(--gold);font-size:20px;font-weight:800}
 .brandname{font-size:25px;font-weight:800;line-height:1}.brandname span{color:var(--gold)}.tagline{font-size:11px;color:#ddd}
-.search{display:flex;flex:1;max-width:450px}.search input{width:100%;padding:10px 14px;border:0;border-radius:22px 0 0 22px}.search button{border:0;background:var(--gold);padding:0 18px;border-radius:0 22px 22px 0}
+.search{display:flex;flex:1;max-width:450px}.search input{width:100%;padding:10px 14px;border:1px solid var(--gold);border-radius:22px 0 0 22px;background:#151515;color:white}.search button{border:0;background:var(--gold);padding:0 18px;border-radius:0 22px 22px 0}
 .headbtn{background:transparent;color:white;border:0;font-weight:700;font-size:15px}
-nav{background:linear-gradient(90deg,#ffe76a,#eab400);box-shadow:0 2px 8px #0002}
-.nav{display:flex;gap:4px;align-items:center;overflow:auto;min-height:44px}.nav button{border:0;background:none;padding:10px 13px;font-weight:700;white-space:nowrap}
-.nav button:hover{background:#fff4b5;border-radius:8px}
+nav{background:#101010;border-bottom:1px solid var(--gold);box-shadow:0 2px 8px #000}
+.nav{display:flex;gap:4px;align-items:center;overflow:auto;min-height:44px}.nav button{border:0;background:none;color:white;padding:10px 13px;font-weight:700;white-space:nowrap}
+.nav button:hover{background:#302609;color:var(--gold);border-radius:8px}
 .hero{margin:16px auto;border-radius:20px;min-height:290px;padding:30px 5%;display:flex;align-items:center;gap:20px;color:white;background:radial-gradient(circle at 75%,#795c12,#171000 40%,#050505 75%);border:2px solid var(--gold);overflow:hidden}
 .hero-copy{flex:1}.hero h1{font-size:clamp(38px,7vw,68px);line-height:1;margin:0;font-weight:800}.hero h1 span{color:var(--gold)}.hero h2{display:inline-block;background:var(--gold);color:#111;border-radius:30px;padding:5px 18px;font-size:22px}.hero p{font-size:17px}.hero-art{font-size:clamp(70px,15vw,145px)}
-.btn{border:0;border-radius:25px;padding:10px 20px;background:linear-gradient(90deg,#ffe45a,#e3a800);font-weight:800;color:#111}
+.btn{border:1px solid var(--gold);border-radius:25px;padding:10px 20px;background:linear-gradient(90deg,#ffe45a,#e3a800);font-weight:800;color:#111}
 .section-title{text-align:center;margin:24px 0 14px;font-size:25px;font-weight:800}.section-title span{display:inline-block;background:#080808;color:var(--gold);border:2px solid var(--gold);padding:3px 30px;border-radius:30px}
-.services{display:grid;grid-template-columns:repeat(4,1fr);background:white;border-radius:15px;padding:12px;box-shadow:0 2px 9px #0001;margin:14px 0}
-.service{text-align:center;font-weight:700;border-right:1px solid #ddd}.service:last-child{border:0}.service b{display:block;font-size:28px}
+.services{display:grid;grid-template-columns:repeat(4,1fr);background:#151515;color:white;border:1px solid var(--gold);border-radius:15px;padding:12px;box-shadow:0 2px 9px #000;margin:14px 0}
+.service{text-align:center;font-weight:700;border-right:1px solid #51451f}.service:last-child{border:0}.service b{display:block;font-size:28px}
 .categories{display:grid;grid-template-columns:repeat(8,1fr);gap:9px}
-.category{border:1px solid var(--line);border-radius:14px;background:white;padding:12px 4px;font-weight:700;box-shadow:0 2px 5px #0001}.category span{display:block;font-size:32px}
+.category{border:1px solid var(--gold);border-radius:14px;background:#151515;color:white;padding:12px 4px;font-weight:700;box-shadow:0 2px 5px #000}.category span{display:block;font-size:32px}
 .grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-.card{background:white;border:1px solid #e7e0cf;border-radius:15px;padding:10px;text-align:center;box-shadow:0 2px 8px #0001;position:relative}
+.card{background:#151515;color:white;border:1px solid #51451f;border-radius:15px;padding:10px;text-align:center;box-shadow:0 2px 8px #000;position:relative}
 .card:hover{border-color:var(--gold);transform:translateY(-2px)}
-.product-img{height:145px;background:#fff9e6;border-radius:10px;display:grid;place-items:center;overflow:hidden;font-size:68px}
+.product-img{height:145px;background:#201b0d;border-radius:10px;display:grid;place-items:center;overflow:hidden;font-size:68px}
 .product-img img{width:100%;height:100%;object-fit:contain}
-.card h3{font-size:17px;margin:8px 0 2px}.price{font-weight:800;color:#b77900;font-size:19px}.old{font-size:13px;color:#999;text-decoration:line-through}.discount{position:absolute;top:8px;right:8px;background:var(--gold);border-radius:15px;padding:2px 8px;font-size:12px;font-weight:800}
+.card h3{font-size:17px;margin:8px 0 2px;color:white}.price{font-weight:800;color:var(--gold);font-size:19px}.old{font-size:13px;color:#aaa;text-decoration:line-through}.discount{position:absolute;top:8px;right:8px;background:var(--gold);color:#111;border-radius:15px;padding:2px 8px;font-size:12px;font-weight:800}
 .card .btn{width:100%;margin-top:7px;padding:7px}
 .promo{margin:20px 0;padding:22px;text-align:center;background:linear-gradient(110deg,#080808,#352500,#080808);border:2px solid var(--gold);border-radius:17px;color:white}.promo h2{color:var(--gold);margin:0}
 .shorts{background:#080808;color:white;border:2px solid var(--gold);border-radius:17px;padding:14px;margin:18px 0}.shortgrid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}.short{height:125px;border-radius:12px;background:linear-gradient(135deg,#fff1c2,#a87b16);display:grid;place-items:center;font-size:48px;color:#111}
-.page{padding:22px 0 38px;min-height:55vh}.page h1{font-size:29px;margin:0 0 15px}
-.panel{background:white;border:1px solid #e5dfce;border-radius:16px;padding:17px;margin:12px 0;box-shadow:0 2px 8px #0001}
-.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}.field label{font-weight:700}
-.field input,.field select,.field textarea{width:100%;padding:11px;border:1px solid #bbb;border-radius:10px;background:white;outline-color:var(--gold2)}.field textarea{min-height:80px}
-.bigbtn{width:100%;border:0;border-radius:28px;background:linear-gradient(90deg,#ffe45a,#dfa600);padding:12px;font-size:20px;font-weight:800;margin-top:10px}
-.summary{max-width:700px;margin:15px auto}.line{display:flex;justify-content:space-between;gap:12px;padding:6px 0;font-size:17px}.total{border-top:2px solid #222;font-weight:800;font-size:22px}
-.cartitem{display:grid;grid-template-columns:90px 1fr auto;gap:12px;align-items:center;padding:10px;border:1px solid #ddd;border-radius:12px;margin:9px 0;background:white}
+.page{padding:22px 0 38px;min-height:55vh}.page h1{font-size:29px;margin:0 0 15px;color:var(--gold)}
+.panel{background:#151515;color:white;border:1px solid var(--gold);border-radius:16px;padding:17px;margin:12px 0;box-shadow:0 2px 8px #000}
+.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.field{display:flex;flex-direction:column;gap:5px}.field.full{grid-column:1/-1}.field label{font-weight:700;color:var(--gold)}
+.field input,.field select,.field textarea{width:100%;padding:11px;border:1px solid #8b7028;border-radius:10px;background:#090909;color:white;outline-color:var(--gold)}.field textarea{min-height:80px}
+.bigbtn{width:100%;border:1px solid var(--gold);border-radius:28px;background:linear-gradient(90deg,#ffe45a,#dfa600);color:#111;padding:12px;font-size:20px;font-weight:800;margin-top:10px}
+.summary{max-width:700px;margin:15px auto}.line{display:flex;justify-content:space-between;gap:12px;padding:6px 0;font-size:17px}.total{border-top:2px solid var(--gold);font-weight:800;font-size:22px}
+.cartitem{display:grid;grid-template-columns:90px 1fr auto;gap:12px;align-items:center;padding:10px;border:1px solid #51451f;border-radius:12px;margin:9px 0;background:#111}
 .cartitem .product-img{height:85px}.qty{display:flex;align-items:center;gap:9px}.qty button{width:32px;height:32px;border:0;border-radius:8px;background:var(--gold);font-size:20px;font-weight:800}
-.remove{border:0;border-radius:50%;width:28px;height:28px;background:#eee}
-.paygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.payoption{display:block;text-align:center;border:2px solid #ccc;border-radius:14px;padding:13px;cursor:pointer}.payoption.selected{border-color:#d99b00;background:#fff8d8}.payoption input{accent-color:#d99b00}.payoption b{display:block;font-size:17px}.payicon{font-size:35px}
-.note{background:#fff4c9;border-radius:10px;padding:12px;margin:10px 0;font-size:15px}
-.success{background:#eaffef;border:2px solid #159447;border-radius:16px;padding:20px;text-align:center}.success h2{color:#13863e}
-.trackstep{display:flex;gap:12px;margin:13px 0;align-items:center}.dot{width:28px;height:28px;border-radius:50%;background:#ddd;display:grid;place-items:center}.trackstep.done .dot{background:#159447;color:white}
-.empty{text-align:center;padding:28px;color:#666}
+.remove{border:0;border-radius:50%;width:28px;height:28px;background:#333;color:white}
+.paygrid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.payoption{display:block;text-align:center;border:2px solid #665526;background:#111;color:white;border-radius:14px;padding:13px;cursor:pointer}.payoption.selected{border-color:var(--gold);background:#302609}.payoption input{accent-color:#d99b00}.payoption b{display:block;font-size:17px;color:var(--gold)}.payicon{font-size:35px}
+.note{background:#302609;color:#fff1bd;border:1px solid var(--gold);border-radius:10px;padding:12px;margin:10px 0;font-size:15px}
+.success{background:#171707;color:white;border:2px solid var(--gold);border-radius:16px;padding:20px;text-align:center}.success h2{color:var(--gold)}
+.trackstep{display:flex;gap:12px;margin:13px 0;align-items:center}.dot{width:28px;height:28px;border-radius:50%;background:#444;display:grid;place-items:center}.trackstep.done .dot{background:var(--gold);color:#111}
+.empty{text-align:center;padding:28px;color:#ddd}
 footer{background:#050505;color:white;border-top:4px solid var(--gold);padding:25px 0;margin-top:25px}
 .footgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.footcol{border-right:1px solid #987400;padding:8px}.footcol:last-child{border:0}.footcol p{margin:6px 0}.social{padding:7px 0;border-bottom:1px solid #444}
 .footbottom{text-align:center;border-top:2px solid var(--gold);padding-top:13px;margin-top:15px}
-.toast{display:none;position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#111;color:white;padding:10px 18px;border-radius:25px;z-index:99}
+.toast{display:none;position:fixed;bottom:18px;left:50%;transform:translateX(-50%);background:#111;color:white;border:1px solid var(--gold);padding:10px 18px;border-radius:25px;z-index:99}
 .floatwa{position:fixed;right:15px;bottom:18px;width:55px;height:55px;border-radius:50%;background:#159447;color:white;display:grid;place-items:center;font-size:28px;z-index:50}
-.adminnav{display:flex;gap:8px;flex-wrap:wrap}.adminnav button{border:0;border-radius:20px;padding:8px 15px;background:#111;color:white}
-table{width:100%;border-collapse:collapse}td,th{border:1px solid #ddd;padding:8px;text-align:left}th{background:#fff1b8}
+.adminnav{display:flex;gap:8px;flex-wrap:wrap}.adminnav button{border:1px solid var(--gold);border-radius:20px;padding:8px 15px;background:#111;color:var(--gold)}
+table{width:100%;border-collapse:collapse}td,th{border:1px solid #665526;padding:8px;text-align:left}th{background:#302609;color:var(--gold)}
 @media(max-width:760px){
  .header{gap:8px}.brandname{font-size:21px}.search{order:3;flex-basis:100%;max-width:none}
  .nav{justify-content:flex-start}.nav button{font-size:13px;padding:9px}
  .hero{min-height:220px;padding:18px}.hero-art{font-size:70px}.hero h2{font-size:17px}
- .services{grid-template-columns:1fr 1fr;gap:8px}.service{border-right:0;border-bottom:1px solid #ddd;padding:6px}
+ .services{grid-template-columns:1fr 1fr;gap:8px}.service{border-right:0;border-bottom:1px solid #51451f;padding:6px}
  .categories{grid-template-columns:repeat(4,1fr)}.category{font-size:13px}.category span{font-size:27px}
  .grid{grid-template-columns:repeat(2,1fr)}.product-img{height:120px}
  .shortgrid{grid-template-columns:repeat(3,1fr)}.short{height:100px}
@@ -81,7 +81,7 @@ table{width:100%;border-collapse:collapse}td,th{border:1px solid #ddd;padding:8p
  <div class="container header">
   <a class="brand" href="#home" onclick="showPage('home')">
    <div class="logo">ZM</div>
-   <div><div class="brandname">ZIAM<span>MART</span></div><div class="tagline">Smart Shopping, Better Life</div></div>
+   <div><div class="brandname">ZIAM <span>MART</span></div><div class="tagline">Smart Shopping, Better Life</div></div>
   </a>
   <form class="search" onsubmit="event.preventDefault();searchProducts()">
    <input id="searchInput" placeholder="পণ্য খুঁজুন..."><button>⌕</button>
@@ -104,7 +104,7 @@ table{width:100%;border-collapse:collapse}td,th{border:1px solid #ddd;padding:8p
 <main id="homePage" class="container">
  <section class="hero">
   <div class="hero-copy">
-   <h1>ZIAM<span>MART</span></h1>
+   <h1>ZIAM <span>MART</span></h1>
    <b>Smart Shopping, Better Life</b>
    <h2>স্মার্ট পণ্য, সেরা সেবা</h2>
    <p>✔ উন্নত মানের পণ্য<br>✔ সাশ্রয়ী দাম<br>✔ সারা বাংলাদেশে ডেলিভারি</p>
@@ -234,7 +234,7 @@ table{width:100%;border-collapse:collapse}td,th{border:1px solid #ddd;padding:8p
  <h1>আমাদের সম্পর্কে</h1><div class="panel">
   <h2>ZIAM MART — Smart Shopping, Better Life</h2>
   <p>খাতা, কলম, হোম ডেকোরেশন, স্টিকার, গিফট সামগ্রী ও কাস্টমাইজড পণ্য নিয়ে আমাদের অনলাইন শপ।</p>
-  <p>📍 লক্ষ্মীপুর, বাংলাদেশ</p><p>WhatsApp: 01822412757</p><p>bKash: 01776131624</p>
+  <p>📍 লক্ষ্মীপুর, বাংলাদেশ</p><p>WhatsApp: 01776131624</p><p>bKash: 01776131624</p>
  </div>
 </section>
 
@@ -281,28 +281,28 @@ table{width:100%;border-collapse:collapse}td,th{border:1px solid #ddd;padding:8p
 <footer>
  <div class="container">
   <div class="footgrid">
-   <div class="footcol"><div class="brand"><div class="logo">ZM</div><div><div class="brandname">ZIAM<span>MART</span></div><div class="tagline">Smart Shopping, Better Life</div></div></div></div>
-   <div class="footcol"><p>🟢 WhatsApp: <a href="https://wa.me/8801822412757">01822412757</a></p><p>📍 লক্ষ্মীপুর, বাংলাদেশ</p></div>
+   <div class="footcol"><div class="brand"><div class="logo">ZM</div><div><div class="brandname">ZIAM <span>MART</span></div><div class="tagline">Smart Shopping, Better Life</div></div></div></div>
+   <div class="footcol"><p>🟢 WhatsApp: <a href="https://wa.me/8801776131624" target="_blank">01776131624</a></p><p>📍 লক্ষ্মীপুর, বাংলাদেশ</p></div>
    <div class="footcol"><p>💗 বিকাশ</p><h3>01776131624</h3></div>
    <div class="footcol"><b>আমাদের পাশে থাকুন</b>
-    <div class="social">▶ YouTube — জিয়াম মার্ট (JIAMMART)</div>
-    <div class="social">f Facebook — জিয়াম মার্ট (JIAMMART)</div>
-    <div class="social">◎ Instagram — জিয়াম মার্ট (JIAMMART)</div>
-    <div class="social">♪ TikTok — জিয়াম মার্ট (JIAMMART)</div>
+    <div class="social">▶ YouTube — ZIAM MART</div>
+    <div class="social">f Facebook — ZIAM MART</div>
+    <div class="social">◎ Instagram — ZIAM MART</div>
+    <div class="social">♪ TikTok — ZIAM MART</div>
    </div>
   </div>
   <div class="footbottom">© 2026 <b style="color:#f5c400">ZIAM MART</b> — সর্বস্বত্ব সংরক্ষিত</div>
  </div>
 </footer>
 
-<a class="floatwa" href="https://wa.me/8801822412757" target="_blank" aria-label="WhatsApp">◉</a>
+<a class="floatwa" href="https://wa.me/8801776131624" target="_blank" aria-label="WhatsApp">◉</a>
 <div class="toast" id="toast"></div>
 
 <script>
 // Supabase configuration
 const SUPABASE_URL = "https://rtjoxdzlvxqgmpszbjcr.supabase.co";
 const SUPABASE_ANON_KEY = "sb_publishable_DY_8nZN8Q7mAydGy0JYvOw_JTKRVh9y";
-const WHATSAPP_NUMBER = "8801822412757";
+const WHATSAPP_NUMBER = "8801776131624";
 const BKASH_NUMBER = "01776131624";
 const db = window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY);
 
@@ -366,7 +366,7 @@ function renderProducts(){
  const q=(document.getElementById("productSearch")?.value||"").toLowerCase().trim();
  const cat=document.getElementById("categoryFilter")?.value||currentCategory;
  const list=products.filter(p=>(!cat||p.category===cat)&&(!q||p.name.toLowerCase().includes(q)));
- document.getElementById("allProducts").innerHTML=list.length?list.map(productCard).join(""):'<div class="empty">কোনো পণ্য পাওয়া যায়নি</div>';
+ document.getElementById("allProducts").innerHTML=list.length?list.map(productCard).join():'<div class="empty">কোনো পণ্য পাওয়া যায়নি</div>';
 }
 function filterCategory(c){currentCategory=c;showPage("products");document.getElementById("categoryFilter").value=c;renderProducts()}
 function searchProducts(){currentCategory="";showPage("products");document.getElementById("categoryFilter").value="";document.getElementById("productSearch").value=document.getElementById("searchInput").value;renderProducts()}
@@ -422,7 +422,7 @@ function selectPayment(){
 }
 function makeOrderMessage(o){
  const items=o.items.map(x=>`• ${x.name} × ${x.qty} = ${money(x.price*x.qty)}`).join("\n");
- return `নতুন অর্ডার — ZIAM MART\n\nঅর্ডার নম্বর: ${o.id}\nনাম: ${o.name}\nমোবাইল: ${o.phone}\nবিভাগ: ${o.division}\nজেলা: ${o.district}\nউপজেলা: ${o.upazila}\nএলাকা: ${o.union}\nঠিকানা: ${o.address}\n\nপণ্য:\n${items}\n\nপণ্যের মূল্য: ${money(o.subtotal)}\nডেলিভারি চার্জ: ${money(o.shipping)}\nসর্বমোট: ${money(o.total)}\nপেমেন্ট: ${o.payment}\n\nক্রেতা পণ্য হাতে পেয়ে টাকা পরিশোধ করবেন। অনুগ্রহ করে অর্ডারটি নিশ্চিত করুন।`;
+ return `নতুন অর্ডার — ZIAM MART\n\nঅর্ডার নম্বর: ${o.id}\nনাম: ${o.name}\nমোবাইল: ${o.phone}\nবিভাগ: ${o.division}\nজেলা: ${o.district}\nউপজেলা: ${o.upazila}\nএলাকা: ${o.union}\nঠিকানা: ${o.address}\n\nপণ্য:\n${items}\n\nপণ্যের মূল্য: ${money(o.subtotal)}\nডেলিভারি চার্জ: ${money(o.shipping)}\nসর্বমোট: ${money(o.total)}\nপেমেন্ট: ${o.payment}\n\nঅনুগ্রহ করে অর্ডারটি নিশ্চিত করুন।`;
 }
 function whatsappUrl(msg){return "https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(msg)}
 async function submitOrder(e){
@@ -445,7 +445,6 @@ async function submitOrder(e){
   payment,bkashTrx:payment==="ক্যাশ অন ডেলিভারি"?"":trx,
   items,subtotal:sub,shipping:fee,total:sub+fee,status:"অর্ডার নিশ্চিতকরণের অপেক্ষায়"
  };
- // WhatsApp tab opens from the user's click, then receives the message after DB save.
  const waTab=payment==="ক্যাশ অন ডেলিভারি"?window.open("about:blank","_blank"):null;
  document.getElementById("submitBtn").disabled=true;
  try{
@@ -552,7 +551,7 @@ async function loadAdminOrders(){
  const {data,error}=await db.from("store_orders").select("*").order("created_at",{ascending:false}).limit(100);
  if(error){box.textContent="অর্ডার লোড হয়নি: "+error.message;return}
  const statuses=["অর্ডার নিশ্চিতকরণের অপেক্ষায়","অর্ডার নিশ্চিত করা হয়েছে","প্যাকেজিং চলছে","কুরিয়ারকে হস্তান্তর করা হয়েছে","ডেলিভারির জন্য পাঠানো হয়েছে","ডেলিভারি সম্পন্ন","বাতিল"];
- box.innerHTML=(data||[]).map(o=>`<div class="panel"><h3>${esc(o.order_id)} — ${esc(o.customer_name)}</h3><p>ফোন: ${esc(o.phone)} | জেলা: ${esc(o.district)}</p><p>পেমেন্ট: ${esc(o.payment_method)} | মোট: ${money(o.total)}</p><p>Transaction ID: ${esc(o.transaction_id||"নেই")}</p><p>ঠিকানা: ${esc(o.address)}</p><p>${(o.items||[]).map(x=>esc(x.name)+" × "+x.qty).join(", ")}</p><div class="field"><label>অর্ডারের অবস্থা</label><select id="status-${esc(o.id)}">${statuses.map(s=>`<option ${s===o.status?"selected":""}>${s}</option>`).join("")}</select></div><button class="btn" onclick="updateOrderStatus(${o.id})">অবস্থা আপডেট</button></div>`).join("")||"এখনো কোনো অর্ডার নেই";
+ box.innerHTML=(data||[]).map(o=>`<div class="panel"><h3>${esc(o.order_id)} — ${esc(o.customer_name)}</h3><p>ফোন: ${esc(o.phone)} | জেলা: ${esc(o.district)}</p><p>পেমেন্ট: ${esc(o.payment_method)} | মোট: ${money(o.total)}</p><p>Transaction ID: ${esc(o.transaction_id||"নেই")}</p><p>ঠিকানা: ${esc(o.address)}</p><p>${(o.items||[]).map(x=>esc(x.name)+" × "+x.qty).join(", ")}</p><div class="field"><label>অর্ডারের অবস্থা</label><select id="status-${esc(o.id)}">${statuses.map(s=>`<option ${s===o.status?"selected":""}>${s}</option>`).join("")}</select></div><button class="btn" onclick="updateOrderStatus('${esc(o.id)}')">অবস্থা আপডেট</button></div>`).join("")||"এখনো কোনো অর্ডার নেই";
 }
 async function updateOrderStatus(id){
  const status=document.getElementById("status-"+id).value;
